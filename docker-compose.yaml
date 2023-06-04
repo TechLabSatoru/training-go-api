@@ -1,0 +1,14 @@
+---
+
+version: '3'
+
+services:
+  golang:
+    image: golang:bullseye
+    container_name: golang
+    working_dir: /home/TechLabSatoru
+    tty: true
+    volumes:
+      - ./:/home/TechLabSatoru
+    ports:
+      - 18080:18080
