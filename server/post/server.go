@@ -21,10 +21,10 @@ func HandleGetRequest(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, response)
 }
 
-// curl -i -f -H "content-type:application/x-binary" -X POST "localhost:18080/v1/upload" --data-binary "@input/sample.tar.gz"
+/* curl -i -f -H "content-type:application/x-binary" -X POST "localhost:18080/v1/upload" --data-binary "@input/sample.tar.gz" */
 func SamplePostRequest(w http.ResponseWriter, r *http.Request) {
 	buf, err := ioutil.ReadAll(r.Body)
-	
+
 	if err != nil {
 		fmt.Fprintln(w, "Failed to upload")
 	}
